@@ -7,7 +7,7 @@ public class DataTable {
                 + "\nEnter your choice: ";
         System.out.print(showDataMenu);
         char choice = main.keyboard.nextLine().charAt(0);
-        System.out.println("--------------");
+        System.out.println("--------------\n\n");
         switch (choice) {
             case '1':
                 dataTable = getDailyWeightTable();
@@ -23,6 +23,7 @@ public class DataTable {
                 break;
         }
         dataTable.print();
+        System.out.println("\n");
     }
 
     public static CommandLineTable getDailyWeightTable() {
