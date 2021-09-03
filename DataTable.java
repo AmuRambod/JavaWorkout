@@ -3,7 +3,7 @@ import java.sql.*;
 public class DataTable {
     public static void showData() {
         // i have to move it over to database connection
-        String getDataQuery = "SELECT * FROM daily_weight;";
+        // String getDataQuery = "SELECT * FROM daily_weight;";
         CommandLineTable dataTable = new CommandLineTable();
         dataTable.setShowVerticalLines(true);
         dataTable.setHeaders("Date", "Week day", "Weight");
