@@ -104,5 +104,25 @@ public class DatabaseConnection {
         }
 
     }
+
+    public static void insertToStandard5km() {
+        System.out.println("\n\n *** ADD 5KM TIME *** \n");
+        System.out.print("Date: ");
+        String date = main.keyboard.nextLine();
+        System.out.print("Minutes: ");
+        int minutes = Integer.parseInt(main.keyboard.nextLine());
+        System.out.print("Seconds: ");
+        int seconds = Integer.parseInt(main.keyboard.nextLine());
+        int totalTime = (minutes * 60) + seconds;
+        String insertTo5kmQuerry = "INSERT INTO standard5km VALUES ('" + date + "' , " + totalTime + ");";
+        try {
+            Statement insertTo5kmStatement = connection.createStatement();
+            insertTo5kmStatement.executeUpdate(insertTo5kmQuerry);
+            System.out.println("\nVictory!");
+            insertTo5kmStatement.close();
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
     // #endregion
 }

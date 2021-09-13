@@ -9,7 +9,8 @@ public class Menu {
         switch (choice) {
             case '1':
                 // insert to daily_weight
-                DatabaseConnection.insertToDailyWeight();
+                // DatabaseConnection.insertToDailyWeight();
+                DatabaseConnection.insertToStandard5km();
                 break;
             case '2':
                 DataTable.showData();
