@@ -106,7 +106,7 @@ public class DatabaseConnection {
     }
 
     public static void insertToStandard5km() {
-        System.out.println("\n\n *** ADD 5KM TIME *** \n");
+        System.out.println("\n\n *** 5KM-TIME *** \n");
         System.out.print("Date: ");
         String date = main.keyboard.nextLine();
         System.out.print("Time: ");
@@ -121,6 +121,7 @@ public class DatabaseConnection {
             insertTo5kmStatement.executeUpdate(insertTo5kmQuerry);
             System.out.println("\nVictory!");
             insertTo5kmStatement.close();
+            System.out.println("------------------");
         } catch (Exception e) {
             System.out.println(e.getMessage());
         }
