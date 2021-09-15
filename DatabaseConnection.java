@@ -109,10 +109,11 @@ public class DatabaseConnection {
         System.out.println("\n\n *** ADD 5KM TIME *** \n");
         System.out.print("Date: ");
         String date = main.keyboard.nextLine();
-        System.out.print("Minutes: ");
-        int minutes = Integer.parseInt(main.keyboard.nextLine());
-        System.out.print("Seconds: ");
-        int seconds = Integer.parseInt(main.keyboard.nextLine());
+        System.out.print("Time: ");
+        String time = main.keyboard.nextLine();
+        String timeArray[] = time.split(":");
+        int minutes = Integer.parseInt(timeArray[0]);
+        int seconds = Integer.parseInt(timeArray[1]);
         int totalTime = (minutes * 60) + seconds;
         String insertTo5kmQuerry = "INSERT INTO standard5km VALUES ('" + date + "' , " + totalTime + ");";
         try {
